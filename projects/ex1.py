@@ -1,7 +1,7 @@
 nome = 'Arthur'
 sobrenome = 'Klein'
-idade = 19
-ano_nascimento = 2009
+idade = 14
+ano_nascimento = 2023 - idade
 maior_de_idade = idade >= 18
 altura_metros = 1.76
 
