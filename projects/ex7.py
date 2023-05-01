@@ -2,8 +2,8 @@
 
 while True:
     num_1 = input('Digite um número: ')
-    num_2 = input('Digite outro número: ')
     operador = input('Digite o operador [+ - * /] ')
+    num_2 = input('Digite outro número: ')
  
     if num_1.isdigit() and num_2.isdigit():
         num_1 = float(num_1)
