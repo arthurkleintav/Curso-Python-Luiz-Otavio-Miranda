@@ -15,7 +15,14 @@ Faça a contagem de tentativas do seu
 usuário.
 """
 
-palavra = 'perfume'
+from os import system
+from random import choice
+
+lista_palavras = [
+    'perfume', 'fogo', 'gato', 'cachorro'
+    ]
+
+palavra = choice(lista_palavras)
 letras_acertadas = ''
 tentativas = 0
 
@@ -39,8 +46,20 @@ while True:
             palavra_formada += l
         else:
             palavra_formada += '*'
+
     print(palavra_formada)
-    
+
     tentativas += 1
 
+    if palavra_formada == palavra:
+        system('cls')
+        
+        print(f'PARABÉNS! Você acertou.\n'
+              f'A palavra era {palavra}\n'
+              f'Número de tentativas: {tentativas}'
+              )
+        
+        palavra = choice(lista_palavras)
+        letras_acertadas = ''
+        tentativas = 0
 
