@@ -62,4 +62,3 @@ while True:
         palavra = choice(lista_palavras)
         letras_acertadas = ''
         tentativas = 0
-
