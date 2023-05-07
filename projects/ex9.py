@@ -26,4 +26,11 @@ while True:
         print('Por favor, digite apenas uma letra.')
         continue
 
-    print('aoba')
+    if tentativa in palavra:
+        letras_acertadas += tentativa
+    
+    for l in palavra:
+        if l in letras_acertadas:
+            print(l, end='')
+        else:
+            print('*', end='')
