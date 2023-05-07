@@ -17,6 +17,7 @@ usuário.
 
 palavra = 'perfume'
 letras_acertadas = ''
+tentativas = 0
 
 print('Pensando na palavra...')
 
@@ -31,7 +32,7 @@ while True:
         print('\nPor favor, digite apenas uma letra.')
         continue
 
-    if tentativa in palavra:
+    if tentativa in palavra and tentativa not in letras_acertadas:
         letras_acertadas += tentativa * palavra.count(tentativa)
     
     for l in palavra:
@@ -39,3 +40,7 @@ while True:
             print(l, end='')
         else:
             print('*', end='')
+    
+    tentativas += 1
+
+print(f'\nPARABÉNS! \nVocê acertou a palavra {palavra} com {tentativas} tentativas!')
