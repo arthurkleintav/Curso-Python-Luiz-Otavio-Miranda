@@ -23,24 +23,24 @@ print('Pensando na palavra...')
 
 while True:
 
-    if len(letras_acertadas) == len(palavra):
-        break
-
     tentativa = input('\nSua tentativa: ')
 
     if len(tentativa) != 1:
         print('\nPor favor, digite apenas uma letra.')
         continue
-
-    if tentativa in palavra and tentativa not in letras_acertadas:
-        letras_acertadas += tentativa * palavra.count(tentativa)
     
+    if tentativa in palavra:
+        letras_acertadas += tentativa
+
+    palavra_formada = ''
+
     for l in palavra:
         if l in letras_acertadas:
-            print(l, end='')
+            palavra_formada += l
         else:
-            print('*', end='')
+            palavra_formada += '*'
+    print(palavra_formada)
     
     tentativas += 1
 
-print(f'\nPARABÉNS! \nVocê acertou a palavra {palavra} com {tentativas} tentativas!')
+
