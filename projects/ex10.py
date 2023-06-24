@@ -7,7 +7,6 @@ Exiba os índices da lista
 """
 
 lista = ['Maria', 'Helena', 'Luiz']
-lista.append('Mário')
 
 indices = range(len(lista))
 
