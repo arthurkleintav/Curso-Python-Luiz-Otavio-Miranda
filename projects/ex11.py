@@ -45,7 +45,7 @@ while True:
         else:
             for i, p in enumerate(lista):
                 print('\033[32m', i, p, '\033[m')
-    
+                
     else:
         print('\033[31mPor favor, selecione uma opção válida.\033[m')
                   
