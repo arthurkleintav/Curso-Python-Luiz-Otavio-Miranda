@@ -12,6 +12,7 @@ os.system('cls')
 lista = []
 
 while True:
+    
     print('Selecione uma opção.')
     user_input = input('[i]nserir [a]pagar [l]istar: ')
 
