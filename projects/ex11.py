@@ -11,7 +11,7 @@ import os
 lista = []
 
 while True:
-    print('\nSelecione uma opção.')
+    print('Selecione uma opção.')
     user_input = input('[i]nserir [a]pagar [l]istar: ')
 
     if user_input.lower().strip()[0] == 'i':
@@ -20,11 +20,12 @@ while True:
         lista.append(valor)
 
     elif user_input.lower().strip()[0] == 'a':
+        os.system('cls')
+
         if len(lista) == 0:
             print('A lista está vazia.')
             continue
         
-        os.system('cls')
         indice = input('Índice: ')
         int_indice = int(indice)
 
@@ -32,6 +33,16 @@ while True:
             print('Por favor, digite um índice válido.')
             continue
         lista.pop(int_indice)
+    
+    elif user_input.lower().strip()[0] == 'l':
+        os.system('cls')
+        
+        if len(lista) == 0:
+            print('A lista está vazia.')
+            continue
+        else:
+            for i, p in enumerate(lista):
+                print(i, p)
     
 
         
