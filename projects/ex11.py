@@ -23,16 +23,23 @@ while True:
 
     elif user_input.lower().strip()[0] == 'a':
         os.system('cls')
+
         if len(lista) == 0:
             print('\033[31mA lista está vazia.\033[m')
             continue
 
         indice = input('Índice: ')
-        int_indice = int(indice)
+
+        try:
+            int_indice = int(indice)
+        except:
+            print('\033[31mPor favor, digite um índice válido.\033[m')
+            continue
 
         if not indice.isnumeric() or int_indice >= len(lista) or int_indice < 0:
             print('\033[31mPor favor, digite um índice válido.\033[m')
             continue
+
         print(f'\033[36mÍtem "{lista[int_indice]}" apagado da lista com sucesso!\033[m')
         lista.pop(int_indice)
 
@@ -42,13 +49,10 @@ while True:
         if len(lista) == 0:
             print('\033[31mA lista está vazia.\033[m')
             continue
+
         else:
             for i, p in enumerate(lista):
                 print('\033[32m', i, p, '\033[m')
-                
+
     else:
         print('\033[31mPor favor, selecione uma opção válida.\033[m')
-                  
-
-        
-            
